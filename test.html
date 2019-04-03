@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>vue绑定class的几种方法</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+<style>
+.red{
+    color:red;
+}
+</style>
+</head>
+
+<body>
+    <div id="vue">
+        <div id="text" :class="classobj">{{msg}}</div>
+        <hr>
+
+
+
+    </div>
+    <script>
+        window.onload = () => {
+            vue = new Vue({
+                el: "#vue",
+                data: {
+                    msg: "<h3>绑定class的几种方法练习，只接绑定类名，绑定类名数组和绑定类名对象</h3>",
+                    classobj:{red:true}
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
